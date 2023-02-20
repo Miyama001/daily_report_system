@@ -1,37 +1,44 @@
 package constants;
 
+/**
+ * DB関連の項目値を定義するインターフェース
+ * ※インターフェイスに定義した変数は public static final 修飾子がついているとみなされる
+ */
 public interface JpaConst {
 
-
+    //persistence-unit名
     String PERSISTENCE_UNIT_NAME = "daily_report_system";
 
-    int ROW_PER_PAGE = 15;
+    //データ取得件数の最大値
+    int ROW_PER_PAGE = 15; //1ページに表示するレコードの数
 
-    String TABLE_EMP = "employees";
-    String EMP_COL_ID = "id";
-    String EMP_COL_CODE = "code";
-    String EMP_COL_NAME = "name";
-    String EMP_COL_PASS = "password";
-    String EMP_COL_ADMIN_FLAG = "admin_flag";
-    String EMP_COL_CREATED_AT = "created_at";
-    String EMP_COL_UPDATED_AT = "updated_at";
-    String EMP_COL_DELETE_FLAG = "delete_flag";
+    //従業員テーブル
+    String TABLE_EMP = "employees"; //テーブル名
+    //従業員テーブルカラム
+    String EMP_COL_ID = "id"; //id
+    String EMP_COL_CODE = "code"; //社員番号
+    String EMP_COL_NAME = "name"; //氏名
+    String EMP_COL_PASS = "password"; //パスワード
+    String EMP_COL_ADMIN_FLAG = "admin_flag"; //管理者権限
+    String EMP_COL_CREATED_AT = "created_at"; //登録日時
+    String EMP_COL_UPDATED_AT = "updated_at"; //更新日時
+    String EMP_COL_DELETE_FLAG = "delete_flag"; //削除フラグ
 
-    int ROLE_ADMIN = 1;
-    int ROLE_GENERAL = 0;
-    int EMP_DEL_TRUE = 1;
-    int EMP_DEL_FALSE = 0;
+    int ROLE_ADMIN = 1; //管理者権限ON(管理者)
+    int ROLE_GENERAL = 0; //管理者権限OFF(一般)
+    int EMP_DEL_TRUE = 1; //削除フラグON(削除済み)
+    int EMP_DEL_FALSE = 0; //削除フラグOFF(現役)
 
     //日報テーブル
-    String TABLE_REP = "reports";
+    String TABLE_REP = "reports"; //テーブル名
     //日報テーブルカラム
-    String REP_COL_ID = "id";
-    String REP_COL_EMP = "employee_id";
-    String REP_COL_REP_DATE = "report_date";
-    String REP_COL_TITLE = "title";
-    String REP_COL_CONTENT = "content";
-    String REP_COL_CREATED_AT = "created_at";
-    String REP_COL_UPDATED_AT = "updated_at";
+    String REP_COL_ID = "id"; //id
+    String REP_COL_EMP = "employee_id"; //日報を作成した従業員のid
+    String REP_COL_REP_DATE = "report_date"; //いつの日報かを示す日付
+    String REP_COL_TITLE = "title"; //日報のタイトル
+    String REP_COL_CONTENT = "content"; //日報の内容
+    String REP_COL_CREATED_AT = "created_at"; //登録日時
+    String REP_COL_UPDATED_AT = "updated_at"; //更新日時
 
     //Entity名
     String ENTITY_EMP = "employee"; //従業員
